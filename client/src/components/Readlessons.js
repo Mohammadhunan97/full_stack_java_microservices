@@ -16,7 +16,6 @@ class Readlist extends Component {
         })
     }
     render() { 
-        console.log(this.state)
         return (<div id="Readlessons">
             {
                 this.state.lessons.map((lesson) => {
