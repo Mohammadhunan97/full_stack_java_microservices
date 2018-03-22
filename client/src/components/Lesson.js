@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Lesson = ({completed, date, student_engagement, title}) => (
+let Lesson = ({id,completed, date, student_engagement, title, deleteLesson, context}) => (
     <div>
         <h1>{title}</h1>
         
@@ -12,8 +12,8 @@ let Lesson = ({completed, date, student_engagement, title}) => (
             </div>
             :<p>you have not completed this</p>
         }
-        <p>{date.toLocaleDateString()}</p>
-        <button>Delete this lesson</button>
+        <p>Created: {date}</p>
+        <button onClick={() => deleteLesson(context,id)}>Delete this lesson</button>
         <button>Update this lesson</button>
     </div>
 
